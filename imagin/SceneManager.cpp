@@ -5,9 +5,10 @@
 #include"GameScene.h"
 #include"Fade.h"
 #include"Ease.h"
+#include"ConfigScene.h"
 
 SceneManager::SceneManager() :IOnSceneChangedListener(){
-	sceneStack.push(std::make_shared<GameScene>(this));
+	sceneStack.push(std::make_shared<TitleScene>(this));
 	fadeflag = false;
 }
 
@@ -47,6 +48,10 @@ void SceneManager::onSceneChanged(eScene next, const bool clear, const bool fade
 	}
 }
 
+void SceneManager::BackScene() {
+	sceneStack.pop();
+}
+
 void SceneManager::ProceedScene(){
 	if (t_clear == true) {
 		while (!sceneStack.empty()) {
@@ -54,17 +59,20 @@ void SceneManager::ProceedScene(){
 		}
 	}
 	switch (t_next) {
-	case Title:
+	case eScene::Title:
 		sceneStack.push(std::make_shared<TitleScene>(this));
 		break;
-	case Game:
+	case eScene::Game:
 		//PlaySoundMem(Sound::Get().game_bgm, DX_PLAYTYPE_LOOP);
 		sceneStack.push(std::make_shared<GameScene>(this));
 		break;
-	case GameOver:
+	case eScene::GameOver:
 		//sceneStack.push(std::make_shared<GameOverScene>(this));
 		break;
-	case Clear:
+	case eScene::Config:
+		sceneStack.push(std::make_shared<ConfigScene>(this));
+		break;
+	case eScene::Clear:
 		//sceneStack.push(std::make_shared<ClearScene>(this));
 		break;
 	default:

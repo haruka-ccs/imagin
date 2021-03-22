@@ -9,7 +9,7 @@ class SceneManager final :public IOnSceneChangedListener {
 private:
 	std::stack<std::shared_ptr<SceneBase>> sceneStack;
 
-	eScene t_next = Title;
+	eScene t_next = eScene::Title;
 	bool t_clear = false;
 	bool fadeflag;
 
@@ -19,6 +19,8 @@ public:
 	Fade fade = Fade(this);
 
 	void onSceneChanged(eScene next, const bool clear, const bool fadeflag);
+
+	void BackScene();
 
 	void ProceedScene();
 

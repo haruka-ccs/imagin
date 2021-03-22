@@ -30,7 +30,7 @@ void GameScene::Draw() {
 }
 
 void GameScene::Update() {
-	if (Input::Get().keystate[KEY_INPUT_Z] == 1) {
+	if (Input::Get().buttonstate[Button::A] == 1) {
 		ChangeReality();
 	}
 

@@ -19,19 +19,19 @@ void Player::Draw() {
 void Player::Update() {
 	int x = 0, y = 0;
 	double v = V;
-	if (Input::Get().keystate[KEY_INPUT_UP] > 0 && pos.GetY() > GameSceneDefine::MARGIN) {
+	if (Input::Get().buttonstate[Button::UP] > 0 && pos.GetY() > GameSceneDefine::MARGIN+10) {
 		--y;
 	}
-	if (Input::Get().keystate[KEY_INPUT_DOWN] > 0 && pos.GetY() < GameSceneDefine::MARGIN + GameSceneDefine::PLAYAREA_HEIGHT) {
+	if (Input::Get().buttonstate[Button::DOWN] > 0 && pos.GetY() < GameSceneDefine::MARGIN + GameSceneDefine::PLAYAREA_HEIGHT-10) {
 		++y;
 	}
-	if (Input::Get().keystate[KEY_INPUT_LEFT] > 0&& pos.GetX() > GameSceneDefine::MARGIN) {
+	if (Input::Get().buttonstate[Button::LEFT] > 0&& pos.GetX() > GameSceneDefine::MARGIN+10) {
 		--x;
 	}
-	if (Input::Get().keystate[KEY_INPUT_RIGHT] > 0 && pos.GetX() < GameSceneDefine::MARGIN + GameSceneDefine::PLAYAREA_WIDTH) {
+	if (Input::Get().buttonstate[Button::RIGHT] > 0 && pos.GetX() < GameSceneDefine::MARGIN + GameSceneDefine::PLAYAREA_WIDTH-10) {
 		++x;
 	}
-	if (Input::Get().keystate[KEY_INPUT_LSHIFT] > 0) {
+	if (Input::Get().buttonstate[Button::R] > 0) {
 		v *= 0.5;
 	}
 	if ((x != 0) && (y != 0)) {

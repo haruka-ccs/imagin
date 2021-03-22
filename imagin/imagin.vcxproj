@@ -23,6 +23,8 @@
     <ClCompile Include="Bullet2.cpp" />
     <ClCompile Include="BulletBase.cpp" />
     <ClCompile Include="BulletManager.cpp" />
+    <ClCompile Include="Choice.cpp" />
+    <ClCompile Include="ConfigScene.cpp" />
     <ClCompile Include="Ease.cpp" />
     <ClCompile Include="Enemy1.cpp" />
     <ClCompile Include="EnemyBase.cpp" />
@@ -46,6 +48,8 @@
     <ClInclude Include="Bullet2.h" />
     <ClInclude Include="BulletBase.h" />
     <ClInclude Include="BulletManager.h" />
+    <ClInclude Include="Choice.h" />
+    <ClInclude Include="ConfigScene.h" />
     <ClInclude Include="Ease.h" />
     <ClInclude Include="Enemy1.h" />
     <ClInclude Include="EnemyBase.h" />

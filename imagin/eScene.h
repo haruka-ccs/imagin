@@ -1,10 +1,11 @@
 #pragma once
 using namespace std;
 
-enum eScene {
+enum class eScene {
 	Title,
 	Game,
 	GameOver,
+	Config,
 	Clear
 };
 
