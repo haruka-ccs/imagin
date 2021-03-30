@@ -24,6 +24,7 @@ namespace Button{
 	const int Y		= 7;
 	const int L		= 8;
 	const int R		= 9;
+	const int START = 10;
 
 	std::string ToStr(int button);
 }

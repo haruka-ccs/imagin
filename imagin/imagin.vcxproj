@@ -40,6 +40,7 @@
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SSManager.cpp" />
     <ClCompile Include="Stage1.cpp" />
+    <ClCompile Include="Stage2.cpp" />
     <ClCompile Include="StageBase.cpp" />
     <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
@@ -66,6 +67,7 @@
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SSManager.h" />
     <ClInclude Include="Stage1.h" />
+    <ClInclude Include="Stage2.h" />
     <ClInclude Include="StageBase.h" />
     <ClInclude Include="TitleScene.h" />
     <ClInclude Include="Vec2d.h" />

@@ -14,22 +14,22 @@ void ConfigScene::Draw() {
 	}
 
 	for (int i = 0; i < keyconfig.GetNum(); ++i) {
-		int x = 100;
 		int color = GetColor(255, 255, 255);
 
 		if (i == keyconfig.GetState()) {
-			x -= 20;
 			if (inputwait == keyconfig.GetState()) {
 				color = GetColor(255, 0, 0);
 			}
 		}
 		if (i != keyconfig.GetNum() - 1) {
-			DrawFormatString(x, 100 + 30 * i, color, "button %s  : %02d", Button::ToStr(i).c_str(), Input::Get().GetPadCorr(i));
+			DrawFormatString(100, 100 + 30 * i, color, "button %s  : %02d", Button::ToStr(i).c_str(), Input::Get().GetPadCorr(i));
 		}
 		else {
-			DrawString(x, 100 + 30 * i, "exit", color);
+			DrawString(100, 100 + 30 * i, "exit", color);
 		}
 	}
+
+	DrawString(80, 100 + 30 * keyconfig.GetState(), ">", GetColor(255, 255, 255));
 }
 
 void ConfigScene::Update() {

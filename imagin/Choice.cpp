@@ -21,3 +21,7 @@ void Choice::Update() {
 		Update(1);
 	}
 }
+
+void Choice::SetState(int state) {
+	this->state = (state + num) % num;
+}

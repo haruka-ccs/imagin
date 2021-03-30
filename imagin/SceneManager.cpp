@@ -36,6 +36,18 @@ void SceneManager::Update() {
 	}
 }
 
+//void SceneManager::onSceneChanged(eScene next, Param param, const bool clear, const bool fadeflag) {
+//	t_clear = clear;
+//	t_next = next;
+//	if (fadeflag == true) {
+//		this->fadeflag = true;
+//		fade.Init();
+//	}
+//	else {
+//		this->ProceedScene(param);
+//	}
+//}
+
 void SceneManager::onSceneChanged(eScene next, const bool clear, const bool fadeflag) {
 	t_clear = clear;
 	t_next = next;

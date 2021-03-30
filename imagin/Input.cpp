@@ -82,6 +82,7 @@ Input::Input() {
 	keycorr[Button::B]		= KEY_INPUT_X;
 	keycorr[Button::X]		= KEY_INPUT_A;
 	keycorr[Button::R]		= KEY_INPUT_LSHIFT;
+	keycorr[Button::START]	= KEY_INPUT_P;
 
 	padcorr[Button::DOWN] = Pad::DOWN;
 	padcorr[Button::LEFT] = Pad::LEFT;
@@ -91,6 +92,7 @@ Input::Input() {
 	padcorr[Button::B] = Pad::B;
 	padcorr[Button::X] = Pad::X;
 	padcorr[Button::R] = Pad::R;
+	padcorr[Button::START] = Pad::START;
 }
 
 bool Input::ChangeRecept() {
@@ -189,6 +191,9 @@ std::string Button::ToStr(int button) {
 		break;
 	case Button::R:
 		res = "R";
+		break;
+	case Button::START:
+		res = "START";
 		break;
 	default:
 		break;

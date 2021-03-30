@@ -120,6 +120,9 @@
     <ClCompile Include="ConfigScene.cpp">
       <Filter>ソース ファイル\scenes</Filter>
     </ClCompile>
+    <ClCompile Include="Stage2.cpp">
+      <Filter>ソース ファイル\scenes\game\stage</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet1.h">
@@ -196,6 +199,9 @@
     </ClInclude>
     <ClInclude Include="ConfigScene.h">
       <Filter>ヘッダー ファイル\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage2.h">
+      <Filter>ヘッダー ファイル\scenes\game\stage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

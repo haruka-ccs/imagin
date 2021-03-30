@@ -33,8 +33,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		
 		Input::Get().Update();
 		
-		scenemanager.Update();
 		scenemanager.Draw();
+		scenemanager.Update();
 
 		ssmanager.Update();
 		

@@ -24,6 +24,6 @@ void Stage1::Update() {
 }
 
 void Stage1::Draw() {
-	//DrawFormatString(0, 100, GetColor(255, 255, 255), "count:%d", count);
+	//DrawFormatString(100, 100, GetColor(255, 255, 255), "stage 1", count);
 	_em->Draw();
 }

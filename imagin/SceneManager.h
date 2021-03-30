@@ -18,6 +18,7 @@ public:
 	
 	Fade fade = Fade(this);
 
+	//void onSceneChanged(eScene next, Param param, const bool clear, const bool fadeflag);
 	void onSceneChanged(eScene next, const bool clear, const bool fadeflag);
 
 	void BackScene();

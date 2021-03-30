@@ -1,6 +1,5 @@
 #include"DxLib.h"
 #include"Enemy1.h"
-#include<functional>
 
 #include"Bullet1.h"
 #include"Bullet2.h"

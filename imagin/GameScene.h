@@ -2,6 +2,7 @@
 #include "SceneBase.h"
 #include "Player.h"
 #include "BulletManager.h"
+#include"Choice.h"
 
 #include"StageBase.h"
 
@@ -21,8 +22,15 @@ private:
 	static bool isReality;
 
 	int hitcount = 0;
+
+	bool pause = false;
+	int pauseScreen = 0;
+	int maskHandle;
+
+	Choice pauseMenu = Choice(2);
 public:
 	GameScene(IOnSceneChangedListener* _impl);
+	GameScene(IOnSceneChangedListener* _impl, Param param);
 
 	void Draw();
 
